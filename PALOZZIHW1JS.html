@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palozzi HW1 Javascript</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border: 1px solid black;"></canvas>
+
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+
+        // Dot
+        context.beginPath();
+        context.arc(250, 250, 2, 0, Math.PI * 2, true);
+        context.fillStyle = 'brown';
+        context.fill();
+        context.closePath();
+
+        // Line
+        context.beginPath();
+        context.moveTo(25, 25);
+        context.lineTo(100, 50);
+        context.strokeStyle = 'blue';
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        // Circle
+        context.beginPath();
+        context.arc(350, 350, 40, 0, Math.PI * 2, true);
+        context.strokeStyle = 'red';
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+
+        // Rectangle
+        context.beginPath();
+        context.rect(25, 300, 120, 60);
+        context.strokeStyle = 'orange';
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath();
+    </script>
+</body>
+</html>
